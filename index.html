@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- Mendefinisikan bahwa dokumen ini adalah dokumen HTML5 -->
+<html lang="en">
+<!-- Menentukan bahasa utama halaman web adalah bahasa Inggris -->
+<head>
+<!-- Bagian "kepala" halaman, berisi metadata dan pengaturan -->
+    <meta charset="UTF-8">
+    <!-- Mengatur karakter encoding menjadi UTF-8 agar semua karakter dapat ditampilkan dengan benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Membuat tampilan halaman web menyesuaikan dengan lebar layar perangkat (responsif) -->
+    <title>Document</title>
+    <!-- Judul halaman yang akan muncul di tab browser -->
+    <style>
+        /* Bagian ini berisi aturan CSS untuk mempercantik tampilan halaman */
+        .contentwrapper{
+            display: flex; /* Mengatur elemen di dalamnya agar sejajar secara horizontal */
+            margin-top: 30px; /* Memberi jarak dari atas */
+            justify-content: center;/* Memusatkan isi secara horizontal */
+            align-items: center; /* Memusatkan isi secara vertikal */
+            gap: 10px; /* Memberi jarak antar elemen di dalamnya */
+        }
+        body {
+            font-family: Arial, sans-serif; /* Mengatur jenis font untuk seluruh halaman */
+            background-image: url("HTML/Profil Bantul.jpg"); /* Menentukan gambar latar belakang */
+            background-size: 140% auto; /* Mengatur ukuran gambar agar sedikit diperbesar */
+            background-position: center; /* Menempatkan gambar di tengah */
+            background-repeat: no-repeat; /* Agar gambar tidak berulang */
+            color: #61351f; /* Warna cokelat tua */
+        }
+        .header{
+            display: flex; /* Menata elemen header agar sejajar */
+            align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+            justify-content: center; /* Memusatkan elemen secara horizontal */
+            position: relative; /* Menjadikan posisi elemen bisa diatur secara absolut di dalamnya */
+            gap: 20px; /* Jarak antar elemen di dalam header */
+            margin-bottom: 20px; /* Jarak bagian bawah header */
+        }
+        .logo { 
+            position: absolute; /* Membuat posisi logo dapat ditempatkan bebas */
+            left: 300px; /* Meletakkan logo 300px dari sisi kiri */
+        }
+        .logo img {
+            width:130px; /* Lebar logo */
+            height: 160px; /* Tinggi logo */
+        }
+        .description{
+            width: 60%; /* Lebar kontainer teks */
+            margin: 20px auto; /* Memusatkan posisi dan memberi jarak vertikal */
+            border-radius: 8px; /* Membulatkan sudut kontainer */
+            padding: 15px; /* Memberi ruang di dalam kontainer */
+            text-align: center; /* Menyusun teks agar rata tengah */
+        }
+        .main-container {
+        width: 90%; /* Lebar keseluruhan kontainer utama */
+        max-width: 1100px; /* Lebar maksimum agar tidak terlalu lebar di layar besar */
+        margin: 30px auto; /* Memusatkan kontainer dan memberi jarak atas-bawah */
+        padding: 20px; /* Ruang dalam kontainer */
+        background-color: rgba(255, 255, 255, 0.7); /* Warna putih transparan untuk latar kontainer */
+        border-radius: 15px; /* Membulatkan sudut kontainer */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Memberi bayangan agar tampak timbul */
+        }
+        .judul{
+            text-align: center; /* Semua teks judul diratakan ke tengah */
+            position: relative; /* Bisa diatur posisinya terhadap elemen lain */
+            left: 9px; /* Sedikit menggeser ke kanan */
+        }
+        .judul h1 {
+            margin: 0; /* Menghapus jarak default */
+            font-size: 32px; /* Ukuran huruf besar untuk judul utama */
+            color: #61351f; /* Warna cokelat tua */
+            letter-spacing:1.5px; /* Jarak antar huruf sedikit dilebarkan */
+        }
+        .judul h2{
+            margin-top: 5px; /* Jarak kecil dari judul di atasnya */
+            color: #61351f; /* Warna cokelat tua */
+        }
+        .judul h3{
+            margin-top: 8px; /* Jarak antar elemen h3 */
+            color: #61351f; /* Warna cokelat tua */
+            font-weight: normal; /* Mengatur ketebalan teks agar tidak terlalu tebal */
+        }
+        .table{
+            width: 60%; /* Lebar tabel */
+            margin: 20px auto; /* Posisi tabel di tengah halaman */
+            padding: 15px 25px; /* Ruang dalam tabel */
+            border-radius: 10px; /* Sudut melengkung */
+            border-collapse: collapse; /* Menggabungkan batas antar sel */
+        }
+        th,td{
+            text-align: center; /* Isi tabel diratakan ke tengah */
+            padding: 8px; /* Jarak antara teks dan garis tabel */
+            border: 1px solid #61351f; /* Garis batas berwarna coklat tua */
+            color: #61351f; /* Warna coklat tua teks */
+        }
+        th{
+            background-color: rgba(97, 53, 31, 0.9); /* Warna latar header tabel */
+            color: white; /* Warna putih untuk teks header tabel */
+            font-weight: bold; /* Teks lebih tebal */
+        }
+        tr:nth-child(even){
+            background-color: rgba(255, 255, 255, 0.4); /* Warna selang-seling untuk baris genap */
+        }
+        tr:hover{
+            background-color: rgba(255, 255, 255, 0.7); /* Efek saat kursor diarahkan ke baris tabel */
+        }
+    </style>
+</head>
+<body>
+    <!-- Semua konten halaman ada di dalam <body> -->
+    <div class="main-container">
+    <!-- Kontainer utama yang menampung seluruh isi halaman -->
+    <div class="contentwrapper">
+    <!-- Bagian atas halaman (logo dan judul) -->
+    <div class="logo"><img src="HTML/Kab Bantul new.png"></div>
+    <!-- Menampilkan logo Kabupaten Bantul -->
+
+    <div class="judul">
+    <!-- Bagian teks judul utama -->
+        <h1>SISTEM INFORMASI STATISTIK</h1>
+        <h2>KABUPETEN BANTUL</h2>
+        <h3>TAHUN 2025</h3>
+    </div>
+    </div>
+
+    <div class="contentwrapper">
+    <!-- Bagian deskripsi umum tentang Kabupaten Bantul -->
+    <div class="description">
+        <p>
+            Kabupaten Bantul terletak di Provinsi Daerah Istimewa Yogyakarta. 
+        Memiliki luas wilayah sekitar 506,85 km² dengan penduduk lebih dari 900 ribu jiwa. 
+        Bantul terkenal dengan sektor pertanian, industri kerajinan, dan pariwisata. 
+        Kabupaten ini juga memiliki kekayaan budaya yang tinggi, termasuk tradisi seni dan upacara adat. 
+        Informasi dalam situs ini menyajikan data statistik terkait penduduk, geografi, 
+        pemerintahan, sosial, pertanian, industri, serta pariwisata dan keuangan Kabupaten Bantul.
+        </p>
+    </div>
+    </div>
+
+    <div class="table">
+        <!-- Tabel data statistik Kecamatan di Kabupaten Bantul -->
+        <table >
+            <tr style="background-color:#61351f;color:white">
+                <th>Kecamatan</th>
+                <th>Jumlah Penduduk (Ribu)</th>
+                <th>Laju Pertumbuhan Penduduk per Tahun (%)</th>
+                <th>Persentase Penduduk (%)</th>
+                <th>Kepadatan Penduduk per km²</th>
+            </tr>
+            <tr>
+                <td>Bantul</td> <!-- berisi data kecamatan Bantul dengan format yang sama dari Bantul hingga Sedayu-->
+                <td>65,9</td>
+                <td>0,47</td>
+                <td>6,43</td>
+                <td>3.024</td>
+            <tr>
+                <td>Bambang Lipuro</td>
+                <td>41,9</td>
+                <td>0,55</td>
+                <td>4,09</td>
+                <td>1.816</td>
+            </tr>
+            <tr>
+                <td>Banguntapan</td>
+                <td>127,6</td>
+                <td>0,46</td>
+                <td>12,44</td>
+                <td>4.489</td>
+            </tr>
+            <tr>
+                <td>Dlingo</td>
+                <td>40,0</td>
+                <td>0,55</td>
+                <td>3,90</td>
+                <td>672</td>
+            </tr>
+            <tr>
+                <td>Imogiri</td>
+                <td>64,9</td>
+                <td>0,71</td>
+                <td>6,33</td>
+                <td>1.182</td>
+            </tr>
+            <tr>
+                <td>Jetis</td>
+                <td>61,0</td>
+                <td>0,83</td>
+                <td>5,94</td>
+                <td>2.592</td>
+            </tr>
+            <tr>
+                <td>Kasihan</td>
+                <td>125,0</td>
+                <td>1,66</td>
+                <td>12,19</td>
+                <td>3.895</td>
+            </tr>
+            <tr>
+                <td>Kretek</td>
+                <td>31,2</td>
+                <td>0,55</td>
+                <td>3,04</td>
+                <td>1.179</td>
+            </tr>
+            <tr>
+                <td>Pandak</td>
+                <td>52,6</td>
+                <td>0,40</td>
+                <td>5,13</td>
+                <td>2.169</td>
+            </tr>
+            <tr>
+                <td>Pundong</td>
+                <td>36,2</td>
+                <td>0,67</td>
+                <td>3,53</td>
+                <td>1.567</td>
+            </tr>
+            <tr>
+                <td>Pajangan</td>
+                <td>40,5</td>
+                <td>1,15</td>
+                <td>3,95</td>
+                <td>1.218</td>
+            </tr>
+            <tr>
+                <td>Pleret</td>
+                <td>52,5</td>
+                <td>1,06</td>
+                <td>5,12</td>
+                <td>2.170</td>
+            </tr>
+            <tr>
+                <td>Piyungan</td>
+                <td>56,3</td>
+                <td>0,73</td>
+                <td>5,49</td>
+                <td>1.694</td>
+            </tr>
+            <tr>
+                <td>Srandakan</td>
+                <td>31,2</td>
+                <td>0,35</td>
+                <td>3,04</td>
+                <td>1.685</td>
+            </tr>
+            <tr>
+                <td>Sanden</td>
+                <td>31,7</td>
+                <td>0,44</td>
+                <td>3,09</td>
+                <td>1.370</td>
+            </tr>
+            <tr>
+                <td>Sewon</td>
+                <td>113,6</td>
+                <td>0,75</td>
+                <td>11,08</td>
+                <td>4.072</td>
+            </tr>
+            <tr>
+                <td>Sedayu</td>
+                <td>53,5</td>
+                <td>0,98</td>
+                <td>5,22</td>
+                <td>1.565</td>
+            </tr>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+</body>
+</html>
